@@ -1,8 +1,8 @@
 # Project Description
 
-**Deployed Frontend URL:** [TODO: Link to your deployed frontend]
+**Deployed Frontend URL:** https://program-x-ariextz.vercel.app/
 
-**Solana Program ID:** [TODO: Your deployed program's public key]
+**Solana Program ID:** Eq4oinoryPeSe3yL664Ux8q7FgdGRXTweW9uqVUTvn4n
 
 ## Project Overview
 
