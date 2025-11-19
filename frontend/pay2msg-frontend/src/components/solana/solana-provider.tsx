@@ -5,6 +5,7 @@ import {
   ConnectionProvider,
   WalletProvider,
 } from '@solana/wallet-adapter-react';
+import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import { clusterApiUrl } from '@solana/web3.js';
 import {
@@ -40,9 +41,11 @@ export function SolanaProvider({ children }: { children: ReactNode }) {
   return (
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
-        <WalletUi config={config}>
-          <WalletUiGillProvider>{children}</WalletUiGillProvider>
-        </WalletUi>
+        <WalletModalProvider>
+          <WalletUi config={config}>
+            <WalletUiGillProvider>{children}</WalletUiGillProvider>
+          </WalletUi>
+        </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
   );
